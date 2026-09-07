@@ -1,0 +1,10 @@
+# Phụ thuộc BỔ SUNG cho bộ chạy tác tử bằng CrewAI (tuỳ chọn).
+#
+#   pip install -r requirements.txt            # bắt buộc
+#   pip install -r requirements-crewai.txt     # chỉ khi muốn AGENT_FRAMEWORK=crewai
+#
+# Cảnh báo: CrewAI kéo theo khoảng 94 gói (chromadb, onnxruntime, tokenizers,
+# grpcio, kubernetes...), chiếm cỡ 1.5-2 GB. Máy chủ cấu hình thấp nên cân nhắc
+# giữ AGENT_FRAMEWORK=native.
+
+crewai>=1.15.0

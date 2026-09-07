@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: learnbuddy-ai
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn web_app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: CHAT_MODEL
+        value: gpt-4o-mini
+      - key: EMBED_MODEL
+        value: text-embedding-3-small
+      - key: AGENT_FRAMEWORK
+        value: native
+      - key: SESSION_TTL_DAYS
+        value: "7"
